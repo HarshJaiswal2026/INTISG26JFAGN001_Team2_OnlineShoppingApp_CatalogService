@@ -13,5 +13,5 @@ public interface MediaRepository extends JpaRepository<Media, Long> {
     Optional<Media> findByProductIdAndIsPrimaryTrue(Long productId);
 
     // Get all media for a product ordered by the seller's preference
-    List<Media> findByProductIdOrderBySortOrderByAsc(Long productId);
+    List<Media> findByProductIdOrderBySortOrderAsc(Long productId);
 }
