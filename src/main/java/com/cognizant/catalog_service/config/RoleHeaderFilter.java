@@ -18,6 +18,7 @@ public class RoleHeaderFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
             throws ServletException, IOException {
 
+
         String role = request.getHeader("X-USER-ROLE");
         if (role != null) {
             // Ensure the role starts with ROLE_ for hasRole() to work
